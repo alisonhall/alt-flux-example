@@ -1,0 +1,59 @@
+{
+  "name": "simple-alt-flux-example",
+  "version": "1.0.0",
+  "description": "A simple Alt-Flux example",
+  "main": "index.js",
+  "sourceMaps": "inline",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ]
+  },
+  "scripts": {
+    "test": "eslint src",
+    "build": "webpack --config webpack.config.js --progress --profile --colors",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alisonhall/simple-alt-flux-example"
+  },
+  "author": "Alison Hall",
+  "license": "ISC",
+  "dependencies": {
+    "alt": "^0.18.6",
+    "prop-types": "^15.5.10",
+    "re-base": "^2.2.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-motion": "^0.3.1",
+    "react-prism": "^4.0.0",
+    "react-router": "^4.1.2",
+    "react-router-dom": "^4.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.5.0",
+    "eslint-plugin-react": "^6.2.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "postcss-devtools": "^1.1.0",
+    "postcss-discard-duplicates": "^2.0.1",
+    "postcss-loader": "^1.0.0",
+    "react-hot-loader": "^3.0.0-beta.3",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1",
+    "webpack-validator": "^2.2.7"
+  }
+}
