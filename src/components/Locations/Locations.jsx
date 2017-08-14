@@ -1,9 +1,11 @@
+/* Locations.jsx */
+
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Link, Route, Redirect } from 'react-router-dom';
 
-var alt = require('./../../alt');
-var LocationActions = require('./../../actions/LocationActions');
-var LocationStore = require('./../../stores/LocationStore');
+import alt from './../../alt';
+import LocationActions from './../../actions/LocationActions';
+import LocationStore from './../../stores/LocationStore';
 
 // Styles
 import './locations.scss';
@@ -61,6 +63,5 @@ class Locations extends React.Component {
         );
     }
 }
-
 
 export default Locations;

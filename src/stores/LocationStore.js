@@ -1,7 +1,9 @@
+/* LocationStore.js */
+
 // The store is your data warehouse. This is the single source of truth for a particular piece of your application’s state.
 
-var alt = require('../alt');
-var LocationActions = require('../actions/LocationActions');
+import alt from '../alt';
+import LocationActions from '../actions/LocationActions';
 
 class LocationStore {
     constructor() {

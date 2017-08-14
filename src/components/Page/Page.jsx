@@ -17,13 +17,18 @@ class Page extends Component {
 		return ( 
 			<div className = "page-container" >
 				<Switch>
+					<Route exact path="/" render={() => (
+						<div>
+							<h1>Home</h1>
+							<Link to={"/locations"}>Go to Locations</Link>
+						</div>
+					)} />
 					<Route path="/locations" render={() => (
 						<Locations/>
 					)} />
 					<Route render={() => (
 						<div>
 							<h1>Error 404: Page Not Found</h1>
-							<Link to={"/locations"}>Go to Locations</Link>
 						</div>
 					)} />
 				</Switch>

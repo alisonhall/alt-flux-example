@@ -1,7 +1,9 @@
+/* LocationSource.js */
+
 // Where should async go? There is no right answer. You can put it in actions or in stores.
 // You can use something like fetch to fetch some data from a server. For the purposes of this tutorial we will be using setTimeout and Promise to mimic a request made using fetch API.
 
-var LocationActions = require('../actions/LocationActions');
+import LocationActions from '../actions/LocationActions';
 
 var mockData = [
 	{ id: 0, name: 'Abu Dhabi' },
@@ -31,36 +33,6 @@ var LocationSource = {
 			}, 250);
 		});
 	}
-
-	// fetch() {
-	// 	return {
-	// 		remote() {
-	// 			return new Promise(function(resolve, reject) {
-	// 				// simulate an asynchronous flow where data is fetched on
-	// 				// a remote server somewhere.
-	// 				setTimeout(function() {
-
-	// 					// change this to `false` to see the error action being handled.
-	// 					if (true) {
-	// 						// resolve with some mock data
-	// 						resolve(mockData);
-	// 					} else {
-	// 						reject('Things have broken');
-	// 					}
-	// 				}, 250);
-	// 			});
-	// 		},
-
-	// 		local() {
-	// 			// Never check locally, always fetch remotely.
-	// 			return null;
-	// 		},
-
-	// 		success: LocationActions.updateLocations,
-	// 		error: LocationActions.locationsFailed,
-	// 		loading: LocationActions.fetchLocations
-	// 	}
-	// }
 };
 
 module.exports = LocationSource;
