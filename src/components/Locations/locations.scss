@@ -1,3 +1,13 @@
-body li {
-    color: darkcyan;
+body {
+    ul {
+        margin-left: 30px;
+    }
+
+    li {
+        color: darkcyan;
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+    }
 }

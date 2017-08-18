@@ -8,30 +8,18 @@ import alt from '../alt';
 import LocationSource from '../sources/LocationSource';
 
 class LocationActions {
-	updateLocations(locations) { // a function listened to by the LocationStore which saves the values in the store
-		return locations;
-	}
-	
-	// We will add an action called fetchLocations which will fetch the locations and then call updateLocations when it successfully completes
-	fetchLocations() {
-		return (dispatch) => {
-			// we dispatch an event here so we can have "loading" state.
-			dispatch();
-			LocationSource.fetch() // fetch the mock data
-			.then((locations) => {
-				// we can access other actions within our action through `this.actions`
-				this.updateLocations(locations);
-			})
-			.catch((errorMessage) => {
-				this.locationsFailed(errorMessage);
-			});
-		}
-	}
-	
-	// A new action locationsFailed deals with the locations not being available.
-	locationsFailed(errorMessage) {
-		return errorMessage;
+	constructor() {
+		this.generateActions(
+			'fetchLocations',
+			'updateLocations',
+			'locationsFailed',
+			'fetchFavorites',
+			'favoriteLocation',
+			'unfavoriteLocation',
+			'integrateFavorites',
+			'importData'
+		);
 	}
 }
 
-module.exports = alt.createActions(LocationActions);
+export default alt.createActions(LocationActions);
