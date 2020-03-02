@@ -5,7 +5,7 @@
 // Inside those actions you can use `this.dispatch` to dispatch your payload through the Dispatcher (Dispatcher is used to broadcast payloads to registered callbacks) and onto the stores. Finally, make sure you export the created actions using `alt.createActions`.
 
 import alt from '../alt';
-import LocationSource from '../sources/LocationSource';
+// import LocationSource from '../sources/LocationSource';
 
 class LocationActions {
 	constructor() {
@@ -17,7 +17,8 @@ class LocationActions {
 			'favoriteLocation',
 			'unfavoriteLocation',
 			'integrateFavorites',
-			'importData'
+			'importData',
+			'syncData'
 		);
 	}
 }

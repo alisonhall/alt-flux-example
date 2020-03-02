@@ -52,16 +52,18 @@ class LocationsList extends React.Component {
             );
         }
 
-        if (LocationStore.isLoading()) {
+        if (this.props.Locations.loading) {
             return (
                 <div>
                     <img src="./../images/loading-spinner.gif" />
                 </div>
             )
         }
+        
         return (
             <ul>
                 {this.props.Locations.locations.map((location, i) => {
+                    console.log(location, i);
                     return (
                         <li key={i}>
                             <input type="checkbox" checked={location.has_favorite} onChange={this.toggleFavorite} data-id={location.id}/>

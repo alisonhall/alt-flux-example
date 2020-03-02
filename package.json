@@ -28,7 +28,7 @@
     "alt-utils": "^1.0.0",
     "firebase": "^4.3.0",
     "prop-types": "^15.5.10",
-    "re-base": "^2.8.0",
+    "re-base": "^3.0.3",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-motion": "^0.3.1",

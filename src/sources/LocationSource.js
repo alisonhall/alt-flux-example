@@ -3,6 +3,9 @@
 // Where should async go? There is no right answer. You can put it in actions or in stores.
 // You can use something like fetch to fetch some data from a server. For the purposes of this tutorial we will be using setTimeout and Promise to mimic a request made using fetch API.
 
+// import firebase from 'firebase';
+
+import base from './../base.js';
 import LocationActions from '../actions/LocationActions';
 
 var mockData = [
@@ -33,7 +36,32 @@ var LocationSource = {
 				resolve(mockData);
 			}, 250);
 		});
+	},
+
+	getInitialData: function() {
+		base.fetch('locations', {
+			context: this,
+			asArray: true
+		}).then(locations => {
+			console.log(locations);
+			return(locations);
+		}).catch(error => {
+			//handle error
+			noErrors = false;
+			console.log("Firebase Fetch ERROR: " + error);
+		});
+	},
+
+	setupSyncState: function() {
+		base.syncState('locations', {
+			context: this,
+			state: 'locations',
+			asArray: true,
+			// then: this.setState({categoryDataLoaded: true})
+		});
 	}
 };
+
+
 
 export default LocationSource;
